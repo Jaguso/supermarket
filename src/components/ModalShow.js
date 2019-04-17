@@ -7,7 +7,7 @@ class ModalShow extends Component {
       <div>
         <Modal/>
       </div>
-    )
+    );
   }
 }
 
