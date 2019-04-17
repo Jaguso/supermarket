@@ -13,15 +13,19 @@ class ListItems extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Supermarket List</h1>
-        <p>{this.state.items.length} ITEMS</p>
+        <div className="title">
+          <h1>Supermarket List</h1>
+          <p>{this.state.items.length} ITEMS</p>
+        </div>
         <ul>
           {this.state.items.map((item, i) => (
-            <li key={i}>
+            <li key={i} className="item">
               {item}
             </li>
           ))}
         </ul>
+        
+        <button>Add item</button>
         
       </div>
 
