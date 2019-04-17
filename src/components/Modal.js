@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import './Modal.css';
+
 
 class Modal extends Component {
   render() {
     return  ReactDOM.createPortal(
-      <div className="ui dinner modals visible active">
+      <div className="ui dinner modals visible active" id="main-div">
         <div className="ui standard modal visible active">
-          sidjf
+          <div >
+            <h1>this is sparta</h1>
+            <p>sdoifjsodifj</p>
+          </div>
         </div>
       </div>,
       document.querySelector('#modal')
