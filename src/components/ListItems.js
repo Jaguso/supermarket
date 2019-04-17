@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ListItems.css';
 
 class ListItems extends Component {
 
@@ -11,12 +12,12 @@ class ListItems extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>Supermarket List</h1>
-        <p>{this.state.items.length} ITEMSssods</p>
+        <p>{this.state.items.length} ITEMS</p>
         <ul>
-          {this.state.items.map(item => (
-            <li>
+          {this.state.items.map((item, i) => (
+            <li key={i}>
               {item}
             </li>
           ))}
