@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { Link, Route, BrowserRouter } from 'react-router-dom';
 import './ListItems.css';
+
+import ModalShow from './ModalShow';
 
 class ListItems extends Component {
 
@@ -26,6 +29,11 @@ class ListItems extends Component {
         </ul>
 
         <button>Add item</button>
+
+        <BrowserRouter>
+          <Link to='/modal'>Modal Show</Link>
+          <Route path='/modal' component={ModalShow} />
+        </BrowserRouter>
         
       </div>
 
