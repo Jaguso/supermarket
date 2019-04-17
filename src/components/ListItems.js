@@ -6,7 +6,7 @@ class ListItems extends Component {
   constructor() {
     super();
     this.state = {
-      items: ['item1', 'item2']
+      items: ['item1', 'item2'],
     }
   }
 
@@ -24,7 +24,7 @@ class ListItems extends Component {
             </li>
           ))}
         </ul>
-        
+
         <button>Add item</button>
         
       </div>
