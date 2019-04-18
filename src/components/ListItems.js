@@ -29,7 +29,7 @@ class ListItems extends Component {
         </ul>
 
         <BrowserRouter>
-          <Link to='/modal' >Modal Show</Link>
+          <Link to='/modal'>Modal Show</Link>
           <Route path='/modal' component={ModalShow} />
         </BrowserRouter>
         
