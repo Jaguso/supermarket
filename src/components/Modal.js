@@ -22,7 +22,7 @@ class Modal extends Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    localStorage.setItem('item: ', this.state.itemname);
+    localStorage.setItem('item ', this.state.itemname);
   }
 
   render() {
@@ -37,10 +37,10 @@ class Modal extends Component {
               name="itemname" 
               value={this.state.itemname} 
               onChange={this.onChangeInput} 
-              />
+            />
             <div className="buttons">
               <button id="button" className="button-1"><a href="/">Cancel</a></button>
-              <button id="button" className="button-2" type="submit">Add</button>
+              <button id="button" className="button-2" type="submit"><a href="/">Add</a></button>
             </div>
           </form>
             

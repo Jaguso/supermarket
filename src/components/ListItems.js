@@ -9,8 +9,17 @@ class ListItems extends Component {
   constructor() {
     super();
     this.state = {
-      items: ['item1', 'item2'],
+      items: ['item1', 'item2']
     }
+  }
+
+  addItem() {
+    if (localStorage.getItem('item')) {
+      this.setState({
+        items: this.state.items.push(localStorage.getItem('item'))
+      });
+    }
+    console.log(localStorage.getItem('item'));
   }
 
   render() {
@@ -27,7 +36,7 @@ class ListItems extends Component {
             </li>
           ))}
         </ul>
-
+        <p>item:{localStorage.getItem('item')}</p>
         <BrowserRouter>
           <Link to='/modal'>Add item</Link>
           <Route path='/modal' component={Modal} />
