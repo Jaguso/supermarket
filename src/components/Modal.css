@@ -2,7 +2,6 @@
   position: absolute;
   top: 100px;
   left: 200px;
-  width: 80%;
 }
 
 #inner-div {
@@ -41,6 +40,7 @@
 
 .button-1 {
   background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .button-2 {

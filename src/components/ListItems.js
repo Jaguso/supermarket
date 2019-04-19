@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, Route, BrowserRouter } from 'react-router-dom';
 import './ListItems.css';
 
-import ModalShow from './ModalShow';
+import Modal from './Modal';
 
 class ListItems extends Component {
 
@@ -29,8 +29,8 @@ class ListItems extends Component {
         </ul>
 
         <BrowserRouter>
-          <Link to='/modal'>Modal Show</Link>
-          <Route path='/modal' component={ModalShow} />
+          <Link to='/modal'>Add item</Link>
+          <Route path='/modal' component={Modal} />
         </BrowserRouter>
         
       </div>
