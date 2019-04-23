@@ -23,8 +23,11 @@ class Modal extends Component {
 
   render() {
     return(
-      <div>
+      <div id="main-div">
         something
+        <div id="inner-div">
+          something else
+        </div>
       </div>
     )
   }
