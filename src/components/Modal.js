@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-
 import './Modal.css';
 
 
 class Modal extends Component {
-
-  constructor() {
-    super();
-    this.state = {
-      itemname: ""
-    }
-  }
 
   render() {
 
     let modal = (
       <div id="main-div">
         <div id="inner-div">
-          something else
+          <form onSubmit={this.props.onSubmit}>
+            <input
+              type="text"
+              name="itemname"
+              value={this.props.itemname}
+              onChange={this.props.onChange}
+            />
+          </form>
           <button onClick={this.props.onClose}>Cancel</button>
+          <button onClick={this.props.onSubmit}>Add</button>
         </div>
       </div>
     );

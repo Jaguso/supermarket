@@ -9,7 +9,8 @@ class ListItems extends Component {
     super();
     this.state = {
       isOpen: false,
-      items: ['item1', 'item2']
+      itemname: "",
+      items: []
     }
   }
 
@@ -25,6 +26,14 @@ class ListItems extends Component {
     this.setState({[name]: value});
   }
 
+  onSubmit = (event) => {
+    event.preventDefault();
+    this.setState({
+      items: this.state.items.concat([this.state.itemname]),
+      isOpen: false
+    });
+  }
+
   render() {
     return (
       <div className="container">
@@ -32,17 +41,20 @@ class ListItems extends Component {
           <h1>Supermarket List</h1>
           <p>{this.state.items.length} ITEMS</p>
         </div>
-        <ul>
+
           {this.state.items.map((item, i) => (
-            <li key={i} className="item">
+            <div key={i} className="item">
               {item}
-            </li>
+            </div>
           ))}
-        </ul>
+
         <button onClick={this.openModal}>Add Item</button>
         <Modal 
           isOpen={this.state.isOpen}
           onClose={() => this.setState({isOpen: false})}
+          onChange={this.onChangeInput}
+          itemname={this.state.itemname}
+          onSubmit={this.onSubmit}
         />
       </div>
 
