@@ -29,8 +29,9 @@ class ListItems extends Component {
   onSubmit = (event) => {
     event.preventDefault();
     this.setState({
-      items: this.state.items.concat([this.state.itemname]),
-      isOpen: false
+      isOpen: false,
+      itemname: "",
+      items: this.state.items.concat([this.state.itemname])
     });
   }
 
