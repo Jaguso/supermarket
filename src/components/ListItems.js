@@ -8,10 +8,22 @@ class ListItems extends Component {
   constructor() {
     super();
     this.state = {
+      isOpen: false,
       items: ['item1', 'item2']
     }
   }
 
+  openModal = () => {
+    this.setState({
+      isOpen: true
+    });
+  }
+
+  onChangeInput = (event) => {
+    const {name, value} = event.target;
+    console.log("Valores: ", name, value);
+    this.setState({[name]: value});
+  }
 
   render() {
     return (
@@ -27,8 +39,11 @@ class ListItems extends Component {
             </li>
           ))}
         </ul>
-        <Modal/>
-        
+        <button onClick={this.openModal}>Add Item</button>
+        <Modal 
+          isOpen={this.state.isOpen}
+          onClose={() => this.setState({isOpen: false})}
+        />
       </div>
 
     )

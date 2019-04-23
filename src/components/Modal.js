@@ -13,21 +13,24 @@ class Modal extends Component {
     }
   }
 
-  onChangeInput = (event) => {
-    const {name, value} = event.target
-
-    console.log("Valores: ", name, value);
-    this.setState({[name]: value})
-  }
-
-
   render() {
-    return(
+
+    let modal = (
       <div id="main-div">
-        something
         <div id="inner-div">
           something else
+          <button onClick={this.props.onClose}>Cancel</button>
         </div>
+      </div>
+    );
+
+    if(!this.props.isOpen) {
+      modal = null;
+    }
+
+    return(
+      <div>
+        {modal}
       </div>
     )
   }
