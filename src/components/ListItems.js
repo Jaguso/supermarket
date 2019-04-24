@@ -53,6 +53,7 @@ class ListItems extends Component {
             this.state.items.map((item, i) => (
               <div key={i} className="item">
                 {item}
+                <p>Remove</p>
               </div>
               ))
             : <h2>List is empty</h2>
