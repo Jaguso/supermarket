@@ -9,6 +9,7 @@ class Modal extends Component {
     let modal = (
       <div id="main-div">
         <div id="inner-div">
+          <h2 className="modal-title">Add item</h2>
           <form onSubmit={this.props.onSubmit}>
             <input
               type="text"
@@ -17,8 +18,10 @@ class Modal extends Component {
               onChange={this.props.onChange}
             />
           </form>
-          <button onClick={this.props.onClose}>Cancel</button>
-          <button onClick={this.props.onSubmit}>Add</button>
+          <div className="buttons">
+            <button onClick={this.props.onClose} id="button" className="button-1">Cancel</button>
+            <button onClick={this.props.onSubmit} id="button" className="button-2">Add</button>
+          </div>
         </div>
       </div>
     );
