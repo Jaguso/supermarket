@@ -52,8 +52,8 @@ class ListItems extends Component {
             this.state.items.length > 0 ? 
             this.state.items.map((item, i) => (
               <div key={i} className="item">
-                {item}
-                <p>Remove</p>
+                <p>{item}</p>
+                <img src={require('../images/trash.png')} alt="delete icon"/>
               </div>
               ))
             : <h2>List is empty</h2>

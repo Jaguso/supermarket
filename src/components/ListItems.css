@@ -21,4 +21,12 @@ button {
   height: 40px;
   background-color: white;
   border: solid 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  height: 20px;
+  width: auto;
 }
