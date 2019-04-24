@@ -42,12 +42,16 @@ class ListItems extends Component {
           <h1>Supermarket List</h1>
           <p>{this.state.items.length} ITEMS</p>
         </div>
-
-          {this.state.items.map((item, i) => (
-            <div key={i} className="item">
-              {item}
-            </div>
-          ))}
+        {
+          this.state.items.length > 0 ? 
+            this.state.items.map((item, i) => (
+              <div key={i} className="item">
+                {item}
+              </div>
+            ))
+          : <h2>List is empty</h2>
+        
+        }
 
         <button onClick={this.openModal}>Add Item</button>
         <Modal 

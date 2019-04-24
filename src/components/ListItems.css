@@ -8,6 +8,10 @@
   margin: 100px;
 }
 
+h1 {
+  font-size: 35px;
+}
+
 button {
   cursor: pointer;
 }
