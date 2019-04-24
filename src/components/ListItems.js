@@ -28,11 +28,16 @@ class ListItems extends Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    this.setState({
-      isOpen: false,
-      itemname: "",
-      items: this.state.items.concat([this.state.itemname])
-    });
+    if (this.state.itemname.length > 0) {
+      this.setState({
+        isOpen: false,
+        itemname: "",
+        items: this.state.items.concat([this.state.itemname])
+      });
+    } else {
+      alert('No item added');
+    }
+
   }
 
   render() {
@@ -42,18 +47,20 @@ class ListItems extends Component {
           <h1>Supermarket List</h1>
           <p>{this.state.items.length} ITEMS</p>
         </div>
-        {
-          this.state.items.length > 0 ? 
+        <div className="main-content">
+          {
+            this.state.items.length > 0 ? 
             this.state.items.map((item, i) => (
               <div key={i} className="item">
                 {item}
               </div>
-            ))
-          : <h2>List is empty</h2>
-        
-        }
+              ))
+            : <h2>List is empty</h2>
+              
+          }
 
-        <button onClick={this.openModal}>Add Item</button>
+          <button onClick={this.openModal}>Add Item</button>
+        </div>
         <Modal 
           isOpen={this.state.isOpen}
           onClose={() => this.setState({isOpen: false})}

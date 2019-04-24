@@ -20,7 +20,7 @@ class Modal extends Component {
           </form>
           <div className="buttons">
             <button onClick={this.props.onClose} id="button" className="button-1">Cancel</button>
-            <button onClick={this.props.onSubmit} id="button" className="button-2">Add</button>
+            <button onClick={this.props.onSubmit} id="button" className="button-2">Save</button>
           </div>
         </div>
       </div>
