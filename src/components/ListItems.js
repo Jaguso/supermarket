@@ -22,7 +22,6 @@ class ListItems extends Component {
 
   onChangeInput = (event) => {
     const {name, value} = event.target;
-    console.log("Valores: ", name, value);
     this.setState({[name]: value});
   }
 
@@ -37,7 +36,14 @@ class ListItems extends Component {
     } else {
       alert('No item added');
     }
+  }
 
+  removeItem = (index) => {
+    const items = Object.assign([], this.state.items);
+    items.splice(index, 1);
+    this.setState({
+      items: items
+    });
   }
 
   render() {
@@ -53,7 +59,11 @@ class ListItems extends Component {
             this.state.items.map((item, i) => (
               <div key={i} className="item">
                 <p>{item}</p>
-                <img src={require('../images/trash.png')} alt="delete icon"/>
+                <img 
+                  src={require('../images/trash.png')} 
+                  alt="delete icon"
+                  onClick={this.removeItem.bind(this, i)}
+                  />
               </div>
               ))
             : <h2>List is empty</h2>
