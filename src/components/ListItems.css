@@ -38,6 +38,7 @@ h1 {
   border: solid 0.5px;
   border-color: rgba(0, 0, 0, 0.4);
   border-radius: 3px;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
