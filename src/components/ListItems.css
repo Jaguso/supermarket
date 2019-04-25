@@ -5,29 +5,70 @@
 }
 
 .title {
-  margin: 100px;
+  margin-top: 100px;
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 38px;
 }
 
-button {
-  cursor: pointer;
+.count {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 1000;
 }
+
+.main-content {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-case {
+  margin: 50px;
+}
+
 
 .item {
-  width: 90%;
-  height: 40px;
+  width: 80%;
+  height: 50px;
+  margin: 8px 0px;
   background-color: white;
-  border: solid 1px;
+  border: solid 0.5px;
+  border-color: rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.item-text {
+  position: relative;
+  top: 8px;
+  left: 10px;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 img {
   height: 20px;
   width: auto;
   cursor: pointer;
+  position: relative;
+  right: 10px;
+}
+
+
+.add-button {
+  cursor: pointer;
+  width: 80%;
+  height: 50px;
+  margin: 20px 0px;
+  background-color: dodgerblue;
+  border: solid 1px;
+  border-color: dodgerblue;
+  border-radius: 3px;
+  font-size: 20px;
+  color: white;
 }

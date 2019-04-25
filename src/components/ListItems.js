@@ -51,14 +51,14 @@ class ListItems extends Component {
       <div className="container">
         <div className="title">
           <h1>Supermarket List</h1>
-          <p>{this.state.items.length} ITEMS</p>
+          <p className="count">{this.state.items.length} ITEMS</p>
         </div>
         <div className="main-content">
           {
             this.state.items.length > 0 ? 
             this.state.items.map((item, i) => (
               <div key={i} className="item">
-                <p>{item}</p>
+                <p className="item-text">{item}</p>
                 <img 
                   src={require('../images/trash.png')} 
                   alt="delete icon"
@@ -66,11 +66,11 @@ class ListItems extends Component {
                   />
               </div>
               ))
-            : <h2>List is empty</h2>
+            : <h2 className="empty-case">List is empty</h2>
               
           }
-
-          <button onClick={this.openModal}>Add Item</button>
+  
+          <button onClick={this.openModal} className="add-button">Add Item</button>
         </div>
         <Modal 
           isOpen={this.state.isOpen}
