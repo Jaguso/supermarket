@@ -69,12 +69,12 @@ class ListItems extends Component {
             : <h2 className="empty-case">List is empty</h2>
               
           }
-  
+
           <button onClick={this.openModal} className="add-button">Add Item</button>
         </div>
         <Modal 
           isOpen={this.state.isOpen}
-          onClose={() => this.setState({isOpen: false})}
+          onClose={() => this.setState({isOpen: false, itemname: ''})}
           onChange={this.onChangeInput}
           itemname={this.state.itemname}
           onSubmit={this.onSubmit}
